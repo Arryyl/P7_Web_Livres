@@ -30,7 +30,7 @@ app.use((req, res, next) => {
 
 //CONNEXION AVEC LA BASE DE DONNEES MONGODB
 mongoose
-  .connect("mongodb+srv://erwanntomer:X44V4b2VhRIOKhRA@p7bookweb.ep54nx3.mongodb.net/?retryWrites=true&w=majority")
+  .connect(process.env.DB_URL)
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
 
